@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>levenshtein search visualizer</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>levenshtein fuzzy search algorithm visual</h1>
+    <h2>background info:</h2>
+    <p>the levenshtein fuzzy search algorithm is a string matching algorithm that returns the "edit distance", or the number of edits done to get one string to the other.</p>
+    <div>
+        <p>the 3 types of edits include:</p>
+        <li>substitution</li>
+        <li>insertion</li>
+        <li>deletion</li>
+    </div>
+    <div>
+        <p>for example, for the word kitten, and the word sitting, the edit distance would be 3, because:</p>
+        <ol>
+        <li>kitten → sitten (substitution of "s" for "k")</li>
+        <li>sitten → sittin (substitution of "i" for "e")</li>
+        <li>sittin → sitting (insertion of "g" at the end)</li>
+        </ol>
+    </div>
+    <div>
+        <p>this is the algorithm behind the approach, using matrices and dynamic programming</p>
+        <img src="./levenshtein_diagram.svg">
+    </div>
+
+    <h2>visualizer:</h2>
+    <div>
+        enter string 1:
+        <input type="text" id="string1" value="kitten">
+    </div>
+    <div>
+        enter string 2:
+        <input type="text" id="string2" value="sitting">
+    </div>
+    <button onclick="levenshtein_matrix()">Run visualizer</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>

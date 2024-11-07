@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Sour Gummy', 'Roboto', sans-serif;
+    text-align: center;
+    color: #1e1e2e;
+}
+body {
+    background-color: #f2cdcd;
+}
+
+p {
+    padding: 1px;
+}
+
+img {
+    padding: 12px;
+    border: 4px solid;
+    border-color: #1e1e2e;
+    border-radius: 24px;
+}
+
+div {
+    padding-bottom: 1em;
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 1rem;
+    padding-inline: 48px;
+    border-radius: 20px;
+    border: 1 #1e1e2e strong;
+}
