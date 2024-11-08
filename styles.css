@@ -1,29 +1,99 @@
+:root {
+    --background: #1e1e2e;
+    --text: #cdd6f4;
+    --border: #11111b;
+    --accent: #cba6f7;
+    --highlight: #f9e2af;
+    --light: #cdd6f4;
+}
+
+:root.mocha, :root.dark {
+    --background: #1e1e2e;
+    --text: #cdd6f4;
+    --border: #11111b;
+    --accent: #cba6f7;
+    --highlight: #f9e2af;
+    --light: #cdd6f4;
+}
+
+:root.machiatto {
+    --background: #24273a;
+    --text: #cad3f5;
+    --border: #181926;
+    --accent: #c6a0f6;
+    --highlight: #eed49f;
+    --light: #cad3f5;
+}
+
+:root.frappe {
+    --background: #303446;
+    --text: #c6d0f5;
+    --border: #232634;
+    --accent: #ca9ee6;
+    --highlight: #e5c890;
+    --light: #c6d0f5;
+}
+
+:root.latte, :root.light {
+    --background: #eff1f5;
+    --text: #4c4f69;
+    --border: #dce0e8;
+    --accent: #ea76cb;
+    --highlight: #df8e1d;
+    --light: #eff1f5;
+}
+
+:root.gruvboxdark {
+    --background: #282828;
+    --text: #ebdbb2;
+    --border: #1d2021;
+    --accent: #d3869b;
+    --highlight: #fabd2f;
+    --light: #ebdbb2;
+}
+
+:root.gruvboxlight {
+    --background: #fbf1c7;
+    --text: #3c3836;
+    --border: #3c3836;
+    --accent: #8f3f71;
+    --highlight: #d79921;
+    --light: #fbf1c7;
+}
+
+
 * {
     box-sizing: border-box;
     font-family: 'Sour Gummy', 'Roboto', sans-serif;
     text-align: center;
-    color: #1e1e2e;
+    color: var(--text);
 }
 body {
-    background-color: #f2cdcd;
+    background-color: var(--background);
 }
 
 p {
     padding: 1px;
 }
 
+#matrix {
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+}
+
 img {
     padding: 12px;
-    border: 4px solid;
-    border-color: #1e1e2e;
+    border: 4px solid var(--border);
     border-radius: 24px;
+    background-color: var(--light);
 }
 
 div {
     padding-bottom: 1em;
 }
 
-ol {
+ol, ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,5 +103,31 @@ button {
     padding: 1rem;
     padding-inline: 48px;
     border-radius: 20px;
-    border: 1 #1e1e2e strong;
+    border: 1 var(--border) strong;
+    color: var(--background);
+    background-color: var(--accent);
+}
+
+select, option, input {
+    color: var(--background);
+    background-color: var(--accent);
+}
+
+.cell {
+    width: 30px;
+    height: auto;
+
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: var(--border) solid;
+    border-radius: 8px;
+    color: var(--accent);
+}
+
+.highlight {
+    background-color: var(--highlight);
+    color: var(--background);
 }
